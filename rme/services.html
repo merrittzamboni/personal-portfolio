@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Gitan -->
+	<link rel="stylesheet" href="https://use.typekit.net/mfs5uvb.css"> 
+	<!-- Jaldi -->
+	<link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<title>Services | Reptile Mogul Exotics</title>
+</head>
+<body>
+	<header>
+		<a title="Reptile Mogul Exotics" href="index.html" class="logo"><span class="hidden">Reptile Mogul Exotics</span></a>
+		<nav>
+			<h2 class="hidden">Navigation</h2>
+			<span class="openbtn" onclick="openNav()">&#9776;</span>
+			<ul>
+				<li>
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				</li>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="animals.html">Animals</a>
+				</li>
+				<li>
+					<a href="supplies.html">Supplies</a>
+				</li>
+				<li>
+					<a href="zoo.html">Zoo</a>
+				</li>
+				<li>
+					<a href="services.html" class="current-page">Services</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="services">
+		<h1>Services</h1>
+		<div class="main-content">
+			<section>
+				<h2>Sexing</h2>
+				<p>Duration varies • $5.00 per animal</p>
+				<p>We are able to determine sex of most reptiles and inverts with molt at the appropriate age. You will only be charged if we can be certain. Please call before coming. Price may fluctuate for unruly critters.</p>
+			</section>
+			<section>
+				<h2>Reptile Boarding</h2>
+				<p>Duration varies • $8.99 per day, 7 day minimum charge</p>
+				<p>We offer a full service Reptile Resort. Pricing can fluctuate depending on animal size and needs. Charged for seven day min due to setup costs. Must pay in advance.</p>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<section id="newsletter">
+			<h3>Get the Newsletter!</h3>
+			<p>Join our mailing list and receive weekly specials directly in your inbox.</p>
+			<form>
+				<label for="name-field">Name:</label>
+				<input type="text" name="name" id="name-field">
+				<label for="email-field">Email:</label>
+				<input type="email" name="email" id="email-field">
+				<input type="submit" value="Subscribe" id="submit-btn">
+			</form>	
+		</section>
+		<div>
+			<section>
+				<h4>Hours</h4>
+				<p>Mon-Sat 11:00 AM - 7:00 PM</p>
+				<p>Sun 11:00 AM - 5:00 PM</p>
+			</section>
+			<section>
+				<h4>Location</h4>
+				<p>2155 E University Dr. Ste 110</p>
+				<p>Tempe AZ, 85281</p>
+			</section>
+			<section>
+				<h4>Contact</h4>
+				<p>480-307-6330</p>
+				<p>jared@reptilemogulexotics.com</p>
+				<p><a href="https://www.facebook.com/ReptileMogulAZ"><i class="fab fa-facebook"></i></a></p>
+			</section>
+			<p id="copyright">&#169; <script>document.write(new Date().getFullYear());</script> Reptile Mogul Exotics</p>
+		</div>
+	</footer>
+	<script>
+		function openNav() {
+  			document.querySelector("nav ul").style.width = "250px";
+		}
+		/* Set the width of the side navigation to 0 */
+		function closeNav() {
+		  document.querySelector("nav ul").style.width = "0";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Merritt Zamboni -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<title>Celestial Seasonings</title>
+	</head>
+	<body>
+		<header>
+			<a title="Celestial Seasonings" href="index.html" class="logo"><span>Celestial Seasonings</span></a>
+			<nav>
+				<h2 class="hidden">Navigation</h2>
+				<ul>
+					<li>
+						<a href="#">Choose Your Tea</a>
+					</li>
+					<li>
+						<a href="#">Visit Celestial</a>
+					</li>
+					<li>
+						<a href="#">Find a Store</a>
+					</li>	
+					<li>
+						<button id="darkmode-btn">Dark Mode</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="hero">
+				<h1><span>Experience</span>Celestial Seasonings</h1>
+				<p>Our mission is to improve people’s lives by providing delicious, beneficial products while maintaining our commitment to our customers, our values and our planet. We blend our teas using the finest herbs, teas, spices and botanicals available, and we lovingly package them in engaging, thoughtful boxes that truly represent the goodness found inside.</p>
+			</section>
+			<section id="products">
+				<h2><span>Discover</span>the endless possibilities</h2>
+				<p>Celestial Seasonings teas are an invitation to bring the perfect balance to your day. From relaxing herbal teas to energizing chai and matcha lattes and everything in between, there’s a Celestial blend that’s just right for any occasion.</p>
+				<div id="holiday">
+					<img src="images/holiday.png" alt="Box of Candy Cane Lane green tea">
+					<h3>Holiday Teas</h3>
+					<p>Shop the collection of festive holiday teas.</p>
+				</div>
+				<div id="hot">
+					<img src="images/hot.png" alt="Box of Morning Thunder black tea">
+					<h3>Hot Teas</h3>
+					<p>Browse our selection of herbal, green, and black teas.</p>
+				</div>
+				<div id="iced">
+					<img src="images/iced.png" alt="Box of cool brew peach black iced tea">
+					<h3>Iced Teas</h3>
+					<p>Making a pitcher of refreshing iced tea takes mere moments.</p>
+				</div>
+				<button id="btn1" class="current-btn">Holiday Teas</button>
+				<button id="btn2">Hot Teas</button>
+				<button id="btn3">Iced Teas</button>
+			</section>
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>Send us your questions or comments.</p>
+				<form>
+					<div id="error-text"></div> 
+					<label for="first-name-field">First name (required):
+						<input type="text" name="name" id="first-name-field">
+					</label>
+					<label for="last-name-field">Last name (required):
+						<input type="text" name="name" id="last-name-field">
+					</label>
+					<label for="message-field">Message (required):
+						<textarea id="message-field"></textarea>
+					</label>
+					<label id="contact-method-label">Preferred contact method (required):</label>
+					<label for="email-checkbox" class="radio-label">
+						<input type="radio" name="contactMethod" value="Email" id="email-checkbox"> Email&nbsp;&nbsp;&nbsp;
+						<span class="radio"></span>
+					</label>
+					<label for="phone-checkbox" class="radio-label">
+						<input type="radio" name="contactMethod" value="Phone" id="phone-checkbox"> Phone
+						<span class="radio"></span>
+					</label>
+					<label for="email-field" id="email-label">Email address:
+						<input type="email" name="email" id="email-field">
+					</label>
+					<label for="phone-field" id="phone-label">Phone number:
+						<input type="tel" name="phone" id="phone-field">
+					</label>
+					<input type="submit" value="Send Message" id="submit-btn">
+					<div id="submission-confirmation">
+						<h3>Message Sent</h3>
+						<p>Thank you for your feedback!<br>We will get back to you within 24 hours.</p>
+					</div>
+				</form>
+			</section>
+		</main>
+		<footer>
+			<div>
+				<ul>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Copyright Policy</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+				<p>Celestial Seasonings, Inc.<br>Site created by Merritt Zamboni for educational purposes.</p>
+			</div>
+			<aside>
+				<h2 class="hidden">Social Media</h2>
+				<a title="Facebook" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+				<a title="Twitter" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+				<a title="Instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+				<a title="Pinterest" href="https://www.facebook.com/"><i class="fab fa-pinterest"></i></a>
+			</aside>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

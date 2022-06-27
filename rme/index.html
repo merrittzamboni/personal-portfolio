@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Gitan -->
+	<link rel="stylesheet" href="https://use.typekit.net/mfs5uvb.css"> 
+	<!-- Jaldi -->
+	<link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<title>Reptile Mogul Exotics</title>
+</head>
+<body>
+	<div id="home-banner">
+		<div id="home-mobile-overlay">
+			<header id="home-header">
+				<a title="Reptile Mogul Exotics" href="index.html" class="logo"><span class="hidden">Reptile Mogul Exotics</span></a>
+				<nav>
+				<h2 class="hidden">Navigation</h2>
+				<span class="openbtn" onclick="openNav()">&#9776;</span>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					</li>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="animals.html">Animals</a>
+					</li>
+					<li>
+						<a href="supplies.html">Supplies</a>
+					</li>
+					<li>
+						<a href="zoo.html">Zoo</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			</header>
+			<section>
+				<h1>Quality Exotic Animals and Supplies</h1>
+				<p>If you're looking for the <strong>best deals</strong> in town, the <strong>finest reptiles</strong> from reputable breeders, and the <strong>highest quality</strong> feeders, then you have come to the right place!</p>
+				<p>Reptile Mogul Exotics (formerly Reptiles & Reefs) is a reptile shop located in Tempe, Arizona. It is our goal to supply Tempe (and one day all of Arizona) with top notch animals at a great price.</p>
+				<a href="animals.html" id="cta-btn">Check out our animals!</a>
+			</section>
+		</div>
+	</div>
+	<main id="home">
+		<div class="main-content">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.0726070383976!2d-111.89524878445545!3d33.421351358158354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b085b2b30fef1%3A0x856025f66c7c583c!2s2155+E+University+Dr+%23110%2C+Tempe%2C+AZ+85281!5e0!3m2!1sen!2sus!4v1466361791353" height="400" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<section id="newsletter">
+			<h3>Get the Newsletter!</h3>
+			<p>Join our mailing list and receive weekly specials directly in your inbox.</p>
+			<form>
+				<label for="name-field">Name:</label>
+				<input type="text" name="name" id="name-field">
+				<label for="email-field">Email:</label>
+				<input type="email" name="email" id="email-field">
+				<input type="submit" value="Subscribe" id="submit-btn">
+			</form>	
+		</section>
+		<div>
+			<section>
+				<h4>Hours</h4>
+				<p>Mon-Sat 11:00 AM - 7:00 PM</p>
+				<p>Sun 11:00 AM - 5:00 PM</p>
+			</section>
+			<section>
+				<h4>Location</h4>
+				<p>2155 E University Dr. Ste 110</p>
+				<p>Tempe AZ, 85281</p>
+			</section>
+			<section>
+				<h4>Contact</h4>
+				<p>480-307-6330</p>
+				<p>jared@reptilemogulexotics.com</p>
+				<p><a href="https://www.facebook.com/ReptileMogulAZ"><i class="fab fa-facebook"></i></a></p>
+			</section>
+			<p id="copyright">&#169; <script>document.write(new Date().getFullYear());</script> Reptile Mogul Exotics</p>
+		</div>
+	</footer>
+	<script>
+		function openNav() {
+  			document.querySelector("nav ul").style.width = "250px";
+		}
+		/* Set the width of the side navigation to 0 */
+		function closeNav() {
+		  document.querySelector("nav ul").style.width = "0";
+		}
+	</script>
+</body>
+</html>

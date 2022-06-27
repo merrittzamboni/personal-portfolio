@@ -1,0 +1,511 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* GLOBAL STYLES */
+
+html {
+    font-family: 'Jaldi', sans-serif;
+    color: #0F100E;
+    font-size: 1.2em;
+    height: 100%;
+}
+
+/* Sticky footer with flexbox credit to Chris Coyier: 
+https://css-tricks.com/couple-takes-sticky-footer/ */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {flex: 1 0 auto;}
+
+.main-content {
+    width: 90%;
+    margin: 2em auto 3em auto;
+}
+
+main section img {margin: 1em 0; width: 100%;}
+
+main p, main ul {margin-bottom: .5em;}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: gitan-latin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 2.1em;
+    padding: 2em 5% .5em 5%;
+    color: #fff;
+    text-shadow: 2px 2px 5px hsl(90, 7%, 6%, 50%);
+}
+h2 {font-size: 2em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.1em; margin-bottom: .3em;}
+
+p {line-height: 1.1;}
+
+ol, ul {list-style: disc;}
+
+li {
+    padding: 0 0 .3em 0;
+    margin-left: 1.5em;
+}
+
+a {
+    color: #3AA328;
+    -moz-transition: color .1s ease-in;
+    -o-transition: color .1s ease-in;
+    -webkit-transition: color .1s ease-in;
+}
+
+a:hover, a:focus {color: #0F100E;}
+
+input:focus {outline: none;}
+
+/* hidden CSS credit to Chris Coyier: 
+https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/ */
+.hidden {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+/* MAP */ 
+
+.map {margin: 1em auto;border: 1px solid #ebebeb;}
+
+.map iframe {width: 100%;}
+
+/* HEADER */
+
+header {
+    background-color: #0F100E;
+    padding: 1.6em 5% 1.2em 5%;
+    display: flex;
+}
+
+header a.logo {
+    display: block;
+    margin-bottom: 1em;
+    width: 80%;
+    max-width: 25em;
+    height: 2.8em;
+    background: url(images/logo.svg) no-repeat 0 0;
+    background-size: contain;
+}
+
+/* NAVIGATION */
+
+nav {margin-left: auto;}
+
+nav .openbtn {
+    color: #FFF;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+nav ul {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: #0F100E;
+    overflow-x: hidden;
+    padding-top: 3em;
+    transition: 0.5s;
+}
+
+nav li {padding-left: 0; margin-left: 0;}
+
+nav li a {
+    padding: .4em .4em .4em 1.3em;
+    text-decoration: none;
+    letter-spacing: .05em;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+}
+
+nav li a:hover, nav li a:focus {color: #5ACE49;}
+
+nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2.3em;
+    margin-left: 50px;
+}
+
+nav .current-page {color: #B5B5B5;}
+
+/* FOOTER */
+
+footer {
+    background: #0F100E;
+    color: #fff;
+    clear: both;
+    flex-shrink: 0;
+    padding: 2em 5%;
+}
+
+footer section {margin-bottom: 1em;}
+
+footer a {
+    color: #F2E05C;
+    font-size: 1.5em;
+    display: block;
+    margin-top: .3em;
+}
+
+footer a:hover, footer aside a:focus {color: #3AA328;}
+
+footer #copyright {
+    font-size: .8em;
+    margin-top: 1em;
+}
+
+/* NEWSLETTER */
+
+#newsletter {margin-bottom: 2em;}
+
+#newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 16em;
+    margin: 1em 0;
+}
+
+#newsletter form label {
+    font-weight: bold;
+    margin-top: .3em;
+}
+
+#newsletter #name-field, #newsletter #email-field {
+    margin: 0 0 1em auto;
+    padding: .1em .8em;
+    height: 1.6em;
+    width: 15em;
+    border-radius: 3em;
+    color: #0F100E;
+    border: 2px solid #0F100E;
+}
+
+#newsletter #name-field:focus, #newsletter #email-field:focus {border: 2px solid #F2E05C;}
+
+#newsletter #submit-btn {
+    width: 9em;
+    height: 2.5em;
+    display: block;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: .8em;
+    border: none;
+    border-radius: 3em;
+    cursor: pointer;
+    background: linear-gradient(to left, #F2E05C 50%, #3AA328 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+
+#newsletter #submit-btn:hover {background-position: left bottom;}
+
+/* HOME */
+
+#home-header {background: none;}
+
+#home-banner {
+    background: url(images/bearded-dragons.png) no-repeat 0 0;
+    background-size: cover;
+    background-position: right;
+    padding-top: 0;
+}
+
+#home-banner section {
+    padding: 0 5% 2em 5%;
+    max-width: 34em;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+#home-banner p {padding-bottom: 1em;}
+
+#home-banner h1 {padding-left: 0; padding-top: 0;}
+
+#home-banner #cta-btn {
+    padding: 1em 2em;
+    width: 9.1em;
+    color: #0F100E;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    border-radius: 3em;
+    background: linear-gradient(to left, #F2E05C 50%, #3AA328 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+
+#home-banner #cta-btn:hover {background-position: left bottom;}
+
+#home-mobile-overlay {background: hsl(90, 7%, 6%, 50%);}
+
+/* ANIMALS */
+
+#animals h1 {
+    background: url(images/python.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#animals #info {
+    background: #F5F5F5;
+    padding: 2em 5%;
+}
+
+#animals img {border-radius: 2em;}
+
+/* SUPPLIES */
+
+#supplies h1 {
+    background: url(images/gecko-drinking.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#supplies #rodent-prices table {
+    width: 100%;
+    max-width: 15em;
+    margin: 1em 0 1.5em 0;
+}
+
+#supplies #rodent-prices table:nth-child(odd) {max-width: 25em;}
+
+#supplies #rodent-prices th, #supplies #rodent-prices td {padding: .5em .75em;}
+
+#supplies #rodent-prices th {text-align: left; font-weight: bold;}
+
+#supplies #rodent-prices tr:nth-child(even){background: #F5F5F5;}
+
+#supplies #rodent-prices tr:nth-child(odd){background: #FCFCFC;}
+
+#supplies #rodent-prices tr:first-child {
+    background: #0F100E;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+#supplies #rodent-prices img {width: 15em;}
+
+/* ZOO */
+
+#zoo h1 {
+    background: url(images/rattlesnake.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#zoo aside {
+    max-width: 12em;
+    background: #F5F5F5;
+    box-shadow: 3px 3px 6px #D1D1D1;
+    padding: 1em 1.5em;
+    margin-top: 1em;
+    border-radius: 1em;
+}
+
+/* SERVICES */
+
+#services h1 {
+    background: url(images/crested-gecko.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ABOUT */
+
+#about h1 {
+    background: url(images/toad.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#about img {width: 100%;}
+
+/* CONTACT */
+
+#contact h1 {
+    background: url(images/turtle.jpg) no-repeat 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-device-width: 850px) {
+
+    /* FOOTER */
+
+    footer div {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: auto;
+    }
+
+    /* NEWSLETTER */
+       
+    #newsletter form {display: inline;}
+
+    #newsletter p {margin-bottom: .7em;}
+
+    #newsletter #name-field, #newsletter #email-field {margin-right: 2em;}
+
+    #newsletter #submit-btn {display: inline;}
+}
+
+@media screen and (min-device-width: 1080px) {
+    
+    /* GLOBAL STYLES */
+
+    h1 {padding-left: 15%; font-size: 3em;}
+
+    .main-content {width: 70%;}
+
+    /* HEADER */
+
+    header {
+        display: block;
+        padding: 2em 0 1.5em 15%;
+    }
+
+    /* NAVIGATION */
+
+    nav ul {
+        width: 100%;
+        padding: 0;
+        position: static;
+        overflow: visible;
+    }
+
+    nav .openbtn, nav .closebtn {display: none;}
+
+    nav ul li {display: inline;}
+
+    nav li a {
+        display: inline;
+        padding: 0;
+        margin-right: 2em;
+        text-shadow: 2px 2px 5px #0F100E;
+    }
+
+    /* FOOTER */
+
+    footer {padding: 2em 15%;}
+
+    footer div {grid-template-columns: 15em 15em 15em;}
+
+    /* HOME */
+
+    #home-banner {background-position: center;}
+
+    #home-banner nav ul {background: none;}
+
+    #home-banner section {padding: 5em 15%; font-size: 1.2em;}
+
+    #home-mobile-overlay {background: none;}
+
+    /* ANIMALS */
+
+    #animals #inverts {display: flex;}
+
+    #animals #inverts img {
+        width: 50%;
+        align-self: flex-start;
+        margin-right: 2em;
+    }
+
+    #animals #inverts div {align-self: center;}
+
+    #animals #info {display: flex; padding: 3em 15%;}
+
+    #animals #info > section {margin-right: 2em;}
+
+    /* SUPPLIES */
+
+    #supplies #rodent-prices > div {display: flex;}
+
+    #supplies #rodent-prices table {margin-right: 1em;}
+
+    #supplies #rodent-prices img {align-self: flex-start;}
+
+    /* ZOO */
+
+    #zoo .main-content {display: flex;}
+
+    #zoo p {max-width: 35em;}
+
+    #zoo aside {width: 30em; margin: 0 0 0 2em;}
+
+    /* ABOUT */
+
+    #about .main-content {display: flex;}
+
+    #about img {
+        width: 50%;
+        max-width: 30em;
+        align-self: flex-start;
+        margin-left: 2em;
+    }
+
+    /* CONTACT */
+
+    #contact .main-content {display: flex;}
+
+    #contact .text-content {width: 20em}
+
+    #contact .map {width: 100%; margin: 1em 0 0 2em;}
+}

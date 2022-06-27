@@ -1,0 +1,442 @@
+/* Merritt Zamboni */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Global Styles */
+
+html {
+    font-family: 'Lato', sans-serif;
+    color: #1c1611;
+    font-size: 1.1em;
+    height: 100%;
+}
+
+h1, h2, h3 { 
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: .04em;
+    margin-bottom: .5em;
+    color: #483627;
+}
+
+h1 span, h2 span { 
+    display: block;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+h1 {font-size: 1.7em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.4em;}
+
+a {
+    text-decoration: none;
+    color: #483627;
+    -moz-transition: color .1s ease;
+    -o-transition: color .1s ease;
+    -webkit-transition: color .1s ease;
+}
+
+a:hover, a:focus {text-decoration: underline;}
+
+p {line-height: 1.5;}
+
+section {padding: 3em 1em; }
+
+section p {
+    max-width: 52em;
+    margin: 0 auto 1em auto;
+}
+
+input:focus {outline: none;}
+
+button, input[type="submit"] {
+    border: none;
+    border-radius: .2em;
+    cursor: pointer;
+    -moz-transition: background .3s ease;
+    -o-transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+
+/* hidden CSS credit to Chris Coyier: 
+https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/ */
+.hidden {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+#hot, #iced {display: none;}
+
+/* Header */
+
+header {padding: 2em 1em;}
+
+header a.logo {
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 17em;
+    height: 8em;
+    background: url(images/logo.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+header a.logo span {display: none;}
+
+/* Navigation */
+
+nav {
+    margin-top: 2em;
+    clear: both;
+    text-align: center;
+}
+
+nav li {display: inline;}
+
+nav li a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #483627;
+    border-bottom: .2em solid #fff;
+    padding-bottom: .5em;
+    margin: 0 1em;
+}
+
+nav li a:hover, nav li a:focus {
+    color: #483627;
+    text-decoration: none;
+    border-bottom: .2em solid #fdcc37;
+}
+
+#darkmode-btn {
+    background: #1c1611;
+    color: #fffbf2;
+    letter-spacing: .04em;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: .5em;
+    padding: .5em 1em;
+}
+
+/* Footer */
+
+footer {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+footer ul a {
+    margin: 0 .7em;
+    font-weight: 700;
+}
+
+footer li {
+    display: inline-block;
+    margin-top: .5em;
+}
+
+footer p {
+    margin: 1.5em 0;
+}
+
+footer aside a {
+    font-size: 2em;
+    margin: 0 .2em;
+}
+
+/* Hero */
+
+#hero {
+    background-image: url("images/hero-light.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Products */
+
+#products {text-align: center;}
+
+#products img {
+    width: 100%;
+    max-width: 470px;
+    margin-top: 1em;
+    cursor: pointer;
+    -moz-transition: transform .4s ease;
+    -o-transition: transform .4s ease;
+    -webkit-transition: transform .4s ease;
+}
+
+#products img:hover {transform: scale(1.1);}
+
+#products > p {text-align: left;}
+
+#btn1, #btn2, #btn3 {
+    background: #483627;
+    color: #fdcc37;
+    letter-spacing: .04em;
+    font-size: 1em;
+    font-weight: bold;
+    margin: .5em;
+    padding: 1em 2em;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn1:focus, #btn2:focus, #btn3:focus, #btn1.current-btn, #btn2.current-btn, #btn3.current-btn {
+    background: #fdcc37;
+    color: #483627;
+}
+
+/* Contact */
+
+#contact {background: #fdcc37;}
+
+#contact p {text-align: center;}
+
+form {
+    width: 95%;
+    max-width: 26em;
+    margin: 2.2em auto 0 auto;
+}
+
+form label {
+    font-weight: 700;
+    display: block;
+    margin: .5em 0 .2em 0;
+}
+
+form label.radio-label {
+    display: inline;
+    font-weight: 400;
+}
+
+#contact-method-label {margin-bottom: .7em;}
+
+#email-label {margin-top: 1.2em;}
+
+form input[type="text"], form input[type="email"], form input[type="tel"], form textarea {
+    border: none;
+    font-family: 'Lato', sans-serif; 
+    font-size: 1em;
+    width: 95%;
+    padding: 0.5em;
+    margin: .5em 0 .8em 0;
+}
+
+form textarea {height: 5em;}
+
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="tel"]:focus, form textarea:focus {
+    outline: 2px solid #483627;
+}
+
+/* custom radio button code from W3Schools */
+.radio-label {
+    display: block;
+    position: relative;
+    padding-left: 1.5em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.1em;
+    width: 1.1em;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-label input:checked ~ .radio:after {
+    display: block;
+}
+
+.radio-label .radio:after {
+    top: .22em;
+    left: .22em;
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background: #483627;
+}
+
+#submit-btn {
+    display: block;
+    background: #483627;
+    color: #fff;
+    letter-spacing: .04em;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 1em 2em;
+}
+
+#submit-btn:hover, #submit-btn:focus {
+    background: #1c1611;
+}
+
+#error-text {
+    display: none;
+    background: #ff2e2e;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+#submission-confirmation {
+    display: none;
+    margin-top: 2.2em;
+    line-height: 1.5em;
+    background: #ffeec4;
+    border: 3px solid #483627;
+    padding: 1em;
+}
+
+/* Dark Mode */
+
+.darkmode {
+    background: #1c1611;
+    color: #fffbf2;
+}
+
+.darkmode h1, .darkmode h2, .darkmode h3 {color: #ffeec4;}
+
+.darkmode nav li a {
+    color: #fff;
+    border-bottom: .2em solid #1c1611;
+    padding-bottom: .5em;
+    margin: 0 1em;
+}
+
+.darkmode nav li a:hover {
+    color: #fff;
+    border-bottom: .2em solid #fdcc37;
+}
+
+#darkmode-btn.darkmode {
+    background: #ffeec4;
+    color: #1c1611;
+}
+
+footer.darkmode a {color: #ffeec4;}
+
+#hero.darkmode {background-image: url("images/hero-dark.png");}
+
+.darkmode img {filter: brightness(.8) contrast(1.2);}
+
+#contact.darkmode {background: #2e241b;}
+
+form input[type="text"].darkmode, form input[type="email"].darkmode, form input[type="tel"].darkmode, form textarea.darkmode {
+    background: #fff;
+    color: #1c1611;
+}
+
+form input[type="text"].darkmode:focus, form input[type="email"].darkmode:focus, form input[type="tel"].darkmode:focus, form textarea.darkmode:focus {
+    outline: 2px solid #fdcc37;
+}
+
+#submit-btn.darkmode {
+    background: #fdcc37;
+    color: #1c1611;
+}
+
+#submit-btn.darkmode:hover, #submit-btn.darkmode:focus {
+    background: #ffeec4;
+}
+
+#submission-confirmation.darkmode {
+    background: #1c1611;
+    border: 3px solid #483627;
+    padding: 1em;
+}
+
+@media screen and (min-device-width: 900px) {
+
+    h1 {font-size: 2em;}
+
+    /* Change footer alignment for large screens */
+    footer {
+        padding: 2em 2em 1em 2em;
+        text-align: left;
+        clear: both;
+        display: flex;
+    }
+
+    footer ul {
+        margin-left: -.7em;
+    }
+
+    footer aside {
+        margin-left: auto;
+    }
+}
